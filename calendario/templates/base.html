@@ -1,0 +1,57 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+
+  <title>RunrunIt Criação</title>
+</head>
+
+<body>
+  <nav>
+
+    {% if user.is_authenticated %}
+    <div class="navbar">
+
+      <div class="pessoal">
+        <h2> Olá {{user.username}}</h2>
+        <a href="{% url 'logout' %}">sair</a>
+      </div>
+
+      <div class="controle">
+        <div class="navbtn">
+          <a href="{% url 'users' %}">colaboradores</a>
+        </div>
+        <div class="navbtn">
+          <a href="{% url 'tarefas' %}">calendar</a>
+        </div>
+        <div class="navbtn">
+          <span class="back-count-nav">{{backlog | length}}</span>
+          <a href="{% url 'backlog' %}">backlog</a>
+        </div>
+      </div>
+
+    </div>
+    {% endif %}
+
+  </nav>
+
+  {% block conteudo %}
+
+  {% endblock conteudo %}
+
+</body>
+
+</html>

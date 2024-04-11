@@ -1,0 +1,292 @@
+{% extends 'base.html' %}
+{% load static %}
+{% csrf_token %}
+
+{% block conteudo %}
+
+<div class="container">
+
+
+  <div class="title-board">
+
+    <div class="board-title">
+      <img src="{% static 'imgs/box.svg' %}" alt="">
+      <h1 class="back-title">Tarefas por Colaborador</h1>
+    </div>
+
+  </div>
+
+  <div class="board-ut">
+
+
+
+    <!-- Alana -->
+    <div class="func">
+
+      <div class="us-name">
+        <h1>Alana</h1><span>{{ utasks.0 | length }}</span>
+      </div>
+
+      {% for task in utasks.0 %}
+      <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
+        <div class="us-card
+        {% for aloc in task.assignments %}
+        {% if aloc.assignee_id == 'alana-castello' and aloc.is_working_on == True %}
+        on
+        {% endif %}
+        {% endfor %}">
+
+          <div class="us-card-id {% if task.board_stage_name == 'Revisão' %} us-rev {% endif %}">
+            <h2>{{ task.id }}</h2>
+            <p>{{task.board_stage_name}}</p>
+          </div>
+
+          <div class="us-card-title">
+            <h3>{{ task.title }}</h3>
+          </div>
+
+          <div class="data-entrega">
+            <p>Prazo:</p>
+            <h1>{{ task.desired_date | date:"d/M" }}</h1>
+          </div>
+
+        </div>
+      </a>
+      {% endfor %}
+
+    </div>
+
+
+    <!-- André -->
+    <div class="func">
+
+      <div class="us-name">
+        <h1>André</h1><span>{{ utasks.1 | length }}</span>
+      </div>
+
+      {% for task in utasks.1 %}
+      <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
+        <div class="us-card
+        {% for aloc in task.assignments %}
+        {% if aloc.assignee_id == ' andre-resttrepo' and aloc.is_working_on == True %}
+        on
+        {% endif %}
+        {% endfor %}">
+
+          <div class="us-card-id {% if task.board_stage_name == 'Revisão' %} us-rev {% endif %}">
+            <h2>{{ task.id }}</h2>
+            <p>{{task.board_stage_name}}</p>
+          </div>
+
+          <div class="us-card-title">
+            <h3>{{ task.title }}</h3>
+          </div>
+
+          <div class="data-entrega">
+            <p>Prazo:</p>
+            <h1>{{ task.desired_date | date:"d/M" }}</h1>
+          </div>
+
+        </div>
+      </a>
+      {% endfor %}
+
+    </div>
+
+
+    <!-- Arna -->
+    <div class="func">
+
+      <div class="us-name">
+        <h1>Arnaldo</h1><span>{{ utasks.2 | length }}</span>
+      </div>
+
+      {% for task in utasks.2 %}
+      <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
+        <div class="us-card
+        {% for aloc in task.assignments %}
+        {% if aloc.assignee_id == 'arnaldo-colon' and aloc.is_working_on == True %}
+        on
+        {% endif %}
+        {% endfor %}">
+
+          <div class="us-card-id {% if task.board_stage_name == 'Revisão' %} us-rev {% endif %}">
+            <h2>{{ task.id }}</h2>
+            <p>{{task.board_stage_name}}</p>
+          </div>
+
+          <div class="us-card-title">
+            <h3>{{ task.title }}</h3>
+          </div>
+
+          <div class="data-entrega">
+            <p>Prazo:</p>
+            <h1>{{ task.desired_date | date:"d/M" }}</h1>
+          </div>
+
+        </div>
+      </a>
+      {% endfor %}
+
+    </div>
+
+
+    <!-- Bruno -->
+    <div class="func">
+
+      <div class="us-name">
+        <h1>Bruno</h1><span>{{ utasks.3 | length }}</span>
+      </div>
+
+      {% for task in utasks.3 %}
+      <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
+        <div class="us-card
+        {% for aloc in task.assignments %}
+        {% if aloc.assignee_id == 'bruno-makhohl' and aloc.is_working_on == True %}
+        on
+        {% endif %}
+        {% endfor %}">
+
+          <div class="us-card-id {% if task.board_stage_name == 'Revisão' %} us-rev {% endif %}">
+            <h2>{{ task.id }}</h2>
+            <p>{{task.board_stage_name}}</p>
+          </div>
+
+          <div class="us-card-title">
+            <h3>{{ task.title }}</h3>
+          </div>
+
+          <div class="data-entrega">
+            <p>Prazo:</p>
+            <h1>{{ task.desired_date | date:"d/M" }}</h1>
+          </div>
+
+        </div>
+      </a>
+      {% endfor %}
+
+    </div>
+
+
+    <!-- Giovanna -->
+    <div class="func">
+
+      <div class="us-name">
+        <h1>Giovanna</h1><span>{{ utasks.4 | length }}</span>
+      </div>
+
+      {% for task in utasks.4 %}
+      <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
+        <div class="us-card
+        {% for aloc in task.assignments %}
+        {% if aloc.assignee_id == 'giovanna-esteves' and aloc.is_working_on == True %}
+        on
+        {% endif %}
+        {% endfor %}">
+
+          <div class="us-card-id {% if task.board_stage_name == 'Revisão' %} us-rev {% endif %}">
+            <h2>{{ task.id }}</h2>
+            <p>{{task.board_stage_name}}</p>
+          </div>
+
+          <div class="us-card-title">
+            <h3>{{ task.title }}</h3>
+          </div>
+
+          <div class="data-entrega">
+            <p>Prazo:</p>
+            <h1>{{ task.desired_date | date:"d/M" }}</h1>
+          </div>
+
+        </div>
+      </a>
+      {% endfor %}
+
+    </div>
+
+
+    <!-- Luca -->
+    <div class="func">
+
+      <div class="us-name">
+        <h1>Luca</h1><span>{{ utasks.5 | length }}</span>
+      </div>
+
+      {% for task in utasks.5 %}
+      <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
+        <div class="us-card
+        {% for aloc in task.assignments %}
+        {% if aloc.assignee_id == 'luca-oliveira' and aloc.is_working_on == True %}
+        on
+        {% endif %}
+        {% endfor %}">
+
+          <div class="us-card-id {% if task.board_stage_name == 'Revisão' %} us-rev {% endif %}">
+            <h2>{{ task.id }}</h2>
+            <p>{{task.board_stage_name}}</p>
+          </div>
+
+          <div class="us-card-title">
+            <h3>{{ task.title }}</h3>
+          </div>
+
+          <div class="data-entrega">
+            <p>Prazo:</p>
+            <h1>{{ task.desired_date | date:"d/M" }}</h1>
+          </div>
+
+        </div>
+      </a>
+      {% endfor %}
+
+    </div>
+
+
+    <!-- Luis -->
+    <div class="func">
+
+      <div class="us-name">
+        <h1>Luis</h1><span>{{ utasks.6 | length }}</span>
+      </div>
+
+      {% for task in utasks.6 %}
+      <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
+        <div class="us-card
+        {% for aloc in task.assignments %}
+        {% if aloc.assignee_id == 'luis-meira' and aloc.is_working_on == True %}
+        on
+        {% endif %}
+        {% endfor %}
+        ">
+
+          <div class="us-card-id {% if task.board_stage_name == 'Revisão' %} us-rev {% endif %}">
+            <h2>{{ task.id }}</h2>
+            <p>{{task.board_stage_name}}</p>
+          </div>
+
+          <div class="us-card-title">
+            <h3>{{ task.title }}</h3>
+          </div>
+
+          <div class="data-entrega">
+            <p>Prazo:</p>
+            <h1>{{ task.desired_date | date:"d/M" }}</h1>
+          </div>
+
+        </div>
+      </a>
+      {% endfor %}
+
+    </div>
+
+
+
+
+  </div>
+
+
+</div>
+
+
+
+{% endblock conteudo %}

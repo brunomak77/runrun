@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block conteudo %}
+
+<div class="container">
+
+  <div class="title-board">
+
+    <div class="board-title">
+      <img src="{% static 'imgs/box.svg' %}" alt="">
+      <h1 class="back-title">Backlog Criação <span>{{backlog | length}}</span></h1>
+    </div>
+  </div>
+
+  <div class="board-backl">
+
+    <div class="board-list">
+      {% for b in backlog %}
+      <a href="https://runrun.it/pt-BR/tasks/{{b.id}}" target="_blank">
+        <div class="back-card">
+
+          <div class="back-card-id">
+            <h2>{{b.id}}</h2>
+          </div>
+
+          <div class="back-card-title">
+            <h3>{{b.title}}</h3>
+          </div>
+
+          <div class="due-date">
+            <h1>{{b.desired_date | date:"d M"}}</h1>
+          </div>
+
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+
+  </div>
+
+</div>
+
+
+
+{% endblock conteudo %}

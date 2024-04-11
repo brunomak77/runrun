@@ -1,0 +1,72 @@
+.formula {
+    margin: 0 auto;
+
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    padding-top: 300px;
+}
+
+.formbox {
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #46c6e7;
+    border-radius: 4px;
+    width: 40%;
+    padding: 12px 8px;
+    /* display: grid;
+    grid-template-columns: 1fr; */
+}
+
+.formbox h1 {
+    padding: 12px 8px;
+    color: #94F3DA;
+}
+
+.formbox h3 {
+    margin: 0 auto;
+    padding: 0;
+    margin-left: 28px;
+    text-align: left;
+    margin-bottom: -12px;
+    color: #ffffff;
+}
+
+.formbox input {
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+    border-radius: 4px;
+    height: 40px;
+    width: 90%;
+    padding: 8px;
+    box-sizing: border-box;
+    color: #46c6e7;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.form-group {
+    margin: 0 auto;
+    padding: 16px 0px;
+    width: 90%;
+}
+
+.form-group input {
+    background-color: #46c6e7;
+    border: #94F3DA solid 2px;
+    border-radius: 4px;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+}
+
+.form-group input:hover {
+    background-color: #EB006C;
+    border: none;
+}

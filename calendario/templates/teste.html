@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block conteudo %}
+<div class="container">
+
+  <div class="title-board">
+
+    <div class="board-title">
+      <img src="{% static 'imgs/box.svg' %}" alt="">
+      <h1>Tarefas Semanais Criação</h1>
+    </div>
+
+  </div>
+
+  <div class="calendar">
+
+    <!-- ---------------------------------------------------------------- -->
+    <!-- DIA 1 -->
+
+    <div class="header">
+
+      <div class="data-space"></div>
+
+      <div class="colab">
+        <div class="col">
+          <h1>Alana <span>{{ tasks.0 | length }}</span></h1>
+        </div>
+
+        <div class="col">
+          <h1>André <span>{{ tasks.1 | length }}</span></h1>
+        </div>
+
+        <div class="col">
+          <h1>Arnaldo <span>{{ tasks.2 | length }}</span></h1>
+        </div>
+
+        <div class="col">
+          <h1>Bruno <span>{{ tasks.3 | length }}</span></h1>
+        </div>
+
+        <div class="col">
+          <h1>Giovanna <span>{{ tasks.4 | length }}</span></h1>
+        </div>
+
+        <div class="col">
+          <h1>Luca <span>{{ tasks.5 | length }}</span></h1>
+        </div>
+
+        <div class="col">
+          <h1>Luis <span>{{ tasks.6 | length }}</span></h1>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="days">
+      <div class="calendar-data">
+        <h1>{{ dias.0 | date:"l"}}</h1>
+        <h3>{{ dias.0 | date:"d M Y"}}</h3>
+        <p>Entregas para hoje:</p>
+
+        <h1 class="prazo"> 0 </h1>
+      </div>
+
+      <div class="colab">
+
+        <!-- Alana -->
+        <div class="col">
+          {% for task in tasks %}
+
+          {% if task.desired_date <= dias.1 %} {% for func in task.assignments %} {% if func.assignee_id == 'luca-oliveira' %} <div class="colab-card {% if task.board_stage_name == 'Revisão' %} rev {% endif %}">
+            <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
+              <h1>{{ task.id }}</h1>
+              <h2>{{ task.title }}</h2>
+              <p>Prazo: <span>{{ task.desired_date | date:"d/m/y" }}</span></p>
+
+              <p class="block"></p>
+
+              {% for iswork in task.assignments %}
+              {% if iswork.is_working_on == True %}
+              <img src="{% static 'imgs/lit_on.svg' %}" alt="">
+              {% else %}
+              <img src="{% static 'imgs/lit_off.svg' %}" alt="">
+              {% endif %}
+              {{ iswork.assignee_name }} <br>
+              {% endfor %}
+              </p>
+
+
+              {% endif %}
+              {% endfor %}
+              {% endif %}
+            </a>
+        </div>
+        {% endfor %}
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+{% endblock conteudo %}
