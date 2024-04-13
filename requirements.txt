@@ -5,7 +5,9 @@ dj-database-url==2.1.0
 Django==4.2.11
 django-admin-honeypot-updated-2021==1.2.0
 django-ipware==6.0.5
+gunicorn==21.2.0
 idna==3.7
+packaging==24.0
 psycopg2-binary==2.9.9
 python-decouple==3.8
 python-ipware==2.0.3
