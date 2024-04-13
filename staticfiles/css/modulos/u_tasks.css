@@ -1,0 +1,139 @@
+.board-ut{
+    margin: 0 auto;
+    width: 98%;
+    padding-top: 200px;
+    padding-bottom: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+    /* background-color: aqua; */
+}
+
+.func{
+    border: 1px solid #46c6e7;
+    border-radius: 5px;
+    padding: 0px 8px;
+    max-height: 500px;
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #6500de #00a6da;
+    
+}
+
+
+.func a{
+    text-decoration: none;
+}
+
+.us-name{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 12px 8px;
+}
+
+.us-name h1{
+    text-align: center;
+    color: #fff;
+}
+
+.us-name span{
+    background-color: #EB006C;
+    padding: 4px 8px;
+    margin-left: 8px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.us-card{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin: 0 auto;
+    margin-bottom: 8px;
+    background-color: #fff;
+    border-radius: 4px;
+    z-index: 8000;
+    overflow: hidden;
+}
+
+.us-card.on{
+    background-color: greenyellow;
+}
+
+.us-card.off{
+    background-color: #fff;
+}
+
+.us-card-id{
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    text-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 12px 4px;
+    background-color: #6500de;
+}
+
+.us-card-id h2{
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.us-card-id p{
+    padding: 0;
+    margin: 0 auto;
+    font-size: 0.8em;
+    color: #fff;
+}
+
+.us-card-id.us-rev{
+    background-color: #ff941f;
+}
+
+.us-card-id.us-rev h2{
+    color: #d0441d;
+}
+
+.us-card-id.us-rev p{
+    color: #d0441d;
+}
+
+.us-card-id h2{
+    align-self: center;
+}
+
+.us-card-title{
+    text-decoration: none;
+    align-self: center;
+    padding: 4px;
+}
+
+.us-card-title h3{
+    color: #00a6da;
+    margin-left: 8px;
+    font-size: 1em;
+}
+
+.data-entrega{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 4px;
+    align-self:center;    
+}
+
+.data-entrega h1{
+    color: #6500de;
+    /* padding: 4px; */
+    text-align: center;
+    align-self: center;
+    font-size: 1.2rem;
+}
+
+.data-entrega p{
+    margin: 0 auto;
+    text-align: center;
+    color: #6500de;
+}

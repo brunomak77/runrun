@@ -1,0 +1,252 @@
+.title-board {
+  background-color: #00a6da;
+  margin: 0px;
+  margin-top: 40px;
+  position: fixed;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  box-sizing: border-box;
+  z-index: 30;
+  /* background-color: tomato; */
+}
+
+.board-title {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 12px;
+  width: 100%;
+  height: 100px;
+  vertical-align: middle;
+}
+
+.board-title img {
+  width: 70px;
+  margin-right: 25px;
+}
+
+.board-title h1 {
+  text-align: center;
+  margin-top: 30px;
+  color: #ffffff;
+}
+
+.calendar {
+  padding-top: 170px;
+  position: absolute;
+}
+
+.header {
+  background-color: #00a6da;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 12px;
+  margin-bottom: -12px;
+}
+
+.data-space {
+  flex: 1;
+  margin: 4px 8px;
+  min-width: 159px;
+  max-width: 160px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 50;
+}
+
+.days {
+  display: flex;
+  margin: 0 auto;
+}
+
+.calendar-data {
+  flex: 1;
+  background-color: #EB006C;
+  margin: 4px 8px;
+  min-width: 159px;
+  max-width: 160px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 50;
+}
+
+.calendar-data h1 {
+  color: #ffffff;
+  padding-top: 20px;
+  font-size: 1.8rem;
+}
+
+.calendar-data h1.prazo {
+  margin: 0 auto;
+  justify-self: center;
+  margin-top: -5px;
+  margin-bottom: 5px;
+  background-color: #00a6da;
+  padding: 10px 0px;
+  width: 80%;
+  border-radius: 5px;
+
+}
+
+.calendar-data h3 {
+  padding-top: 5px;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.calendar-data p {
+  color: #b9ebfa;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.colab {
+  flex: 1;
+  /* background-color: cadetblue; */
+  margin: 0 auto;
+  display: grid;
+  gap: 8px;
+  margin-bottom: -4px;
+  margin-right: 8px;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.col {
+  display: block;
+  padding: 0px;
+  min-width: 200px;
+  margin-bottom: 18px;
+  max-height: 1000px;
+  overflow: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #6500de #00a6da;
+  /* margin-top: 20px; */
+}
+
+.col h1 {
+  background-color: #6500de;
+  font-size: 1rem;
+  color: #ffffff;
+  margin: 0px;
+  height: 40px;
+  border-radius: 5px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.linha {
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 95%;
+  border: 1px solid #6500de;
+}
+
+.col span {
+  background-color: #EB006C;
+  padding: 4px 8px;
+  margin-left: 8px;
+  border-radius: 25%;
+}
+
+.colab-card {
+  background-color: white;
+  display: block;
+  text-align: left;
+  margin: 0px;
+  margin-top: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.colab-card.rev {
+  background-color: #fff1c0;
+}
+
+.colab-card.atraso {
+  background-color: #ffd0d2;
+}
+
+.colab-card h1 {
+  background-color: #6500de;
+  margin: 0px;
+  text-align: center;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.colab-card.rev h1 {
+  background-color: #ff941f;
+}
+
+.colab-card.atraso h1 {
+  background-color: red;
+}
+
+.colab-card h1.cc-active {
+  background-color: greenyellow;
+  color: #6500de;
+}
+
+.colab-card h2 {
+  color: #6500de;
+  padding: 4px;
+  margin-top: 4px;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.colab-card p {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.colab-card .blok {
+  display: block;
+  padding-left: 5px;
+  /* width: 1990px; */
+  /* color: #EB006C; */
+}
+
+.colab-card p span {
+  background-color: #00a6da;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  margin: 0px;
+  border-radius: 5px;
+}
+
+.colab-card.atraso p span {
+  background-color: red;
+}
+
+.colab-card p span.entregue {
+  background-color: #00a6da;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  margin: 0px;
+  border-radius: 5px;
+}
+
+.colab-card img {
+  width: 10px;
+  height: 10px;
+}
+
+.hide {
+  display: none;
+}
