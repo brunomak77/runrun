@@ -20,6 +20,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'bluebox-runrun.up.railway.app']
 
+CSRF_TRUSTED_ORIGINS = ['https://bluebox-runrun.up.railway.app']
 
 # Application definition
 
