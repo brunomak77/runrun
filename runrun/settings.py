@@ -1,4 +1,5 @@
 from pathlib import Path
+import dj_database_url
 import os
 from decouple import config
 import mimetypes
@@ -36,7 +37,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    "whitenoise.middleware.WhiteNoiseMiddleware",
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -75,6 +76,10 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+POSTGRES_LOCALLY = False
+if POSTGRES_LOCALLY == True:
+    DATABASES['default'] = dj_database_url.parse(config('DATABASE_URL'))
 
 
 # Password validation
