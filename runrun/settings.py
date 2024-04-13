@@ -78,8 +78,8 @@ DATABASES = {
     }
 }
 
-POSTGRES_LOCALLY = False
-if POSTGRES_LOCALLY == True:
+# POSTGRES_LOCALLY = True
+if DEBUG == True:
     DATABASES['default'] = dj_database_url.parse(config('DATABASE_URL'))
 
 
