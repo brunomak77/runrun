@@ -14,8 +14,21 @@
 
     </div>
 
+
     <div class="formula">
         <div class="formbox">
+
+            {% if user.is_authenticated %}
+
+            <h1>Escolha a visualização:</h1>
+            <div class="menu-login">
+                <a class="navbtn btn-form" href="{% url 'users' %}">colaboradores</a>
+                <a class="navbtn btn-form" href="{% url 'tarefas' %}">calendar</a>
+                <a class="navbtn btn-form" href="{% url 'backlog' %}">backlog</a>
+            </div>
+
+
+            {% else %}
             <h1>Login</h1>
             <form method="post">
                 {% csrf_token %}
@@ -34,7 +47,7 @@
         </div>
 
     </div>
-
+    {% endif %}
 
 </div>
 

@@ -22,6 +22,9 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'bluebox-runrun.up.railway.app']
 
 CSRF_TRUSTED_ORIGINS = ['https://bluebox-runrun.up.railway.app']
 
+SESSION_COOKIE_AGE = 10800
+SESSION_SAVE_EVERY_REQUEST = True
+
 # Application definition
 
 INSTALLED_APPS = [

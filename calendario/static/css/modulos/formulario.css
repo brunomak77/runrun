@@ -13,14 +13,14 @@
     vertical-align: middle;
     background-color: #46c6e7;
     border-radius: 4px;
-    width: 40%;
+    min-width: 40%;
     padding: 12px 8px;
     /* display: grid;
     grid-template-columns: 1fr; */
 }
 
 .formbox h1 {
-    padding: 12px 8px;
+    padding: 12px 12px;
     color: #94F3DA;
 }
 
@@ -69,4 +69,22 @@
 .form-group input:hover {
     background-color: #EB006C;
     border: none;
+}
+
+.menu-login {
+    margin: 12px;
+}
+
+.btn-form {
+  text-align: center;
+  margin: 4px;
+  padding: 8px 60px;
+  vertical-align: middle;
+  background-color: #00a6da;
+  border-radius: 4px;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+
 }
