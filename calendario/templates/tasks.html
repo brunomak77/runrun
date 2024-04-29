@@ -117,291 +117,291 @@
             </div>
 
 
-            <!-- André -->
-            <div class="col">
-                {% for task in tasks.1 %}
+                <!-- André -->
+                <div class="col">
+                    {% for task in tasks.1 %}
 
-                {% if task.desired_date == dias.0 %}
-                <div class="colab-card {% if task.board_stage_name == 'Revisão' %} rev {% endif %}">
-                    <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
+                    {% if task.desired_date == dias.0 %}
+                    <div class="colab-card {% if task.board_stage_name == 'Revisão' %} rev {% endif %}">
+                        <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
 
-                        <h1>{{ task.id }}</h1>
-                        <h2>{{ task.title }}</h2>
-                        <p>Prazo: <span>{{ task.desired_date | date:"d/m/y" }}</span></p>
-                        <p class="blok"> {% for aloc in task.assignments %}
-                            {% if aloc.is_working_on == True %}
-                            <img src="{% static 'imgs/lit_on.svg' %}" alt="">
-                            {% else %}
-                            <img src="{% static 'imgs/lit_off.svg' %}" alt="">
-                            {% endif %}
-                            {{ aloc.assignee_name }} <br>
-                            {% endfor %}
-                        </p>
-                    </a>
+                            <h1>{{ task.id }}</h1>
+                            <h2>{{ task.title }}</h2>
+                            <p>Prazo: <span>{{ task.desired_date | date:"d/m/y" }}</span></p>
+                            <p class="blok"> {% for aloc in task.assignments %}
+                                {% if aloc.is_working_on == True %}
+                                <img src="{% static 'imgs/lit_on.svg' %}" alt="">
+                                {% else %}
+                                <img src="{% static 'imgs/lit_off.svg' %}" alt="">
+                                {% endif %}
+                                {{ aloc.assignee_name }} <br>
+                                {% endfor %}
+                            </p>
+                        </a>
+                    </div>
+
+                    {% elif task.desired_date < dias.0 %} <div class="colab-card atraso">
+                        <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
+
+                            <h1>{{ task.id }}</h1>
+                            <h2>{{ task.title }}</h2>
+                            <p>Prazo: <span>{{ task.desired_date | date:"d/m/y" }}</span></p>
+
+                            <p class="blok"> {% for aloc in task.assignments %}
+                                {% if aloc.is_working_on == True %}
+                                <img src="{% static 'imgs/lit_on.svg' %}" alt="">
+                                {% else %}
+                                <img src="{% static 'imgs/lit_off.svg' %}" alt="">
+                                {% endif %}
+                                {{ aloc.assignee_name }} <br>
+                                {% endfor %}
+                            </p>
+                        </a>
                 </div>
 
-                {% elif task.desired_date < dias.0 %} <div class="colab-card atraso">
-                    <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
-
-                        <h1>{{ task.id }}</h1>
-                        <h2>{{ task.title }}</h2>
-                        <p>Prazo: <span>{{ task.desired_date | date:"d/m/y" }}</span></p>
-
-                        <p class="blok"> {% for aloc in task.assignments %}
-                            {% if aloc.is_working_on == True %}
-                            <img src="{% static 'imgs/lit_on.svg' %}" alt="">
-                            {% else %}
-                            <img src="{% static 'imgs/lit_off.svg' %}" alt="">
-                            {% endif %}
-                            {{ aloc.assignee_name }} <br>
-                            {% endfor %}
-                        </p>
-                    </a>
+                {% endif %}
+                {% endfor %}
+                <!-- Fecha André -->
             </div>
 
-            {% endif %}
-            {% endfor %}
-            <!-- Fecha André -->
-        </div>
+                <!-- Arna -->
+                <div class="col">
+                    {% for task in tasks.2 %}
 
-        <!-- Arna -->
-        <div class="col">
-            {% for task in tasks.2 %}
+                    {% if task.desired_date == dias.0 %}
+                    <div class="colab-card {% if task.board_stage_name == 'Revisão' %} rev {% endif %}">
+                        <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
 
-            {% if task.desired_date == dias.0 %}
-            <div class="colab-card {% if task.board_stage_name == 'Revisão' %} rev {% endif %}">
-                <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
+                            <h1>{{ task.id }}</h1>
+                            <h2>{{ task.title }}</h2>
+                            <p>Prazo: <span>{{ task.desired_date | date:"d/m/y" }}</span></p>
+                            <p class="blok"> {% for aloc in task.assignments %}
+                                {% if aloc.is_working_on == True %}
+                                <img src="{% static 'imgs/lit_on.svg' %}" alt="">
+                                {% else %}
+                                <img src="{% static 'imgs/lit_off.svg' %}" alt="">
+                                {% endif %}
+                                {{ aloc.assignee_name }} <br>
+                                {% endfor %}
+                            </p>
+                        </a>
+                    </div>
 
-                    <h1>{{ task.id }}</h1>
-                    <h2>{{ task.title }}</h2>
-                    <p>Prazo: <span>{{ task.desired_date | date:"d/m/y" }}</span></p>
-                    <p class="blok"> {% for aloc in task.assignments %}
-                        {% if aloc.is_working_on == True %}
-                        <img src="{% static 'imgs/lit_on.svg' %}" alt="">
-                        {% else %}
-                        <img src="{% static 'imgs/lit_off.svg' %}" alt="">
-                        {% endif %}
-                        {{ aloc.assignee_name }} <br>
-                        {% endfor %}
-                    </p>
-                </a>
+                    {% elif task.desired_date < dias.0 %} <div class="colab-card atraso">
+                        <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
+
+                            <h1>{{ task.id }}</h1>
+                            <h2>{{ task.title }}</h2>
+                            <p>Prazo: <span>{{ task.desired_date | date:"d/m/y" }}</span></p>
+
+                            <p class="blok"> {% for aloc in task.assignments %}
+                                {% if aloc.is_working_on == True %}
+                                <img src="{% static 'imgs/lit_on.svg' %}" alt="">
+                                {% else %}
+                                <img src="{% static 'imgs/lit_off.svg' %}" alt="">
+                                {% endif %}
+                                {{ aloc.assignee_name }} <br>
+                                {% endfor %}
+                            </p>
+                        </a>
+                </div>
+
+                {% endif %}
+                {% endfor %}
+                <!-- Fecha Arna -->
             </div>
 
-            {% elif task.desired_date < dias.0 %} <div class="colab-card atraso">
-                <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
 
-                    <h1>{{ task.id }}</h1>
-                    <h2>{{ task.title }}</h2>
-                    <p>Prazo: <span>{{ task.desired_date | date:"d/m/y" }}</span></p>
+                <!-- Bruno -->
+                <div class="col">
+                    {% for task in tasks.3 %}
 
-                    <p class="blok"> {% for aloc in task.assignments %}
-                        {% if aloc.is_working_on == True %}
-                        <img src="{% static 'imgs/lit_on.svg' %}" alt="">
-                        {% else %}
-                        <img src="{% static 'imgs/lit_off.svg' %}" alt="">
-                        {% endif %}
-                        {{ aloc.assignee_name }} <br>
-                        {% endfor %}
-                    </p>
-                </a>
-        </div>
+                    {% if task.desired_date == dias.0 %}
+                    <div class="colab-card {% if task.board_stage_name == 'Revisão' %} rev {% endif %}">
+                        <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
 
-        {% endif %}
-        {% endfor %}
-        <!-- Fecha Arna -->
-    </div>
+                            <h1>{{ task.id }}</h1>
+                            <h2>{{ task.title }}</h2>
+                            <p>Prazo: <span>{{ task.desired_date | date:"d/m/y" }}</span></p>
+                            <p class="blok"> {% for aloc in task.assignments %}
+                                {% if aloc.is_working_on == True %}
+                                <img src="{% static 'imgs/lit_on.svg' %}" alt="">
+                                {% else %}
+                                <img src="{% static 'imgs/lit_off.svg' %}" alt="">
+                                {% endif %}
+                                {{ aloc.assignee_name }} <br>
+                                {% endfor %}
+                            </p>
+                        </a>
+                    </div>
 
+                    {% elif task.desired_date < dias.0 %} <div class="colab-card atraso">
+                        <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
 
-    <!-- Bruno -->
-    <div class="col">
-        {% for task in tasks.3 %}
+                            <h1>{{ task.id }}</h1>
+                            <h2>{{ task.title }}</h2>
+                            <p>Prazo: <span>{{ task.desired_date | date:"d/m/y" }}</span></p>
 
-        {% if task.desired_date == dias.0 %}
-        <div class="colab-card {% if task.board_stage_name == 'Revisão' %} rev {% endif %}">
-            <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
+                            <p class="blok"> {% for aloc in task.assignments %}
+                                {% if aloc.is_working_on == True %}
+                                <img src="{% static 'imgs/lit_on.svg' %}" alt="">
+                                {% else %}
+                                <img src="{% static 'imgs/lit_off.svg' %}" alt="">
+                                {% endif %}
+                                {{ aloc.assignee_name }} <br>
+                                {% endfor %}
+                            </p>
+                        </a>
+                </div>
 
-                <h1>{{ task.id }}</h1>
-                <h2>{{ task.title }}</h2>
-                <p>Prazo: <span>{{ task.desired_date | date:"d/m/y" }}</span></p>
-                <p class="blok"> {% for aloc in task.assignments %}
-                    {% if aloc.is_working_on == True %}
-                    <img src="{% static 'imgs/lit_on.svg' %}" alt="">
-                    {% else %}
-                    <img src="{% static 'imgs/lit_off.svg' %}" alt="">
-                    {% endif %}
-                    {{ aloc.assignee_name }} <br>
-                    {% endfor %}
-                </p>
-            </a>
-        </div>
-
-        {% elif task.desired_date < dias.0 %} <div class="colab-card atraso">
-            <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
-
-                <h1>{{ task.id }}</h1>
-                <h2>{{ task.title }}</h2>
-                <p>Prazo: <span>{{ task.desired_date | date:"d/m/y" }}</span></p>
-
-                <p class="blok"> {% for aloc in task.assignments %}
-                    {% if aloc.is_working_on == True %}
-                    <img src="{% static 'imgs/lit_on.svg' %}" alt="">
-                    {% else %}
-                    <img src="{% static 'imgs/lit_off.svg' %}" alt="">
-                    {% endif %}
-                    {{ aloc.assignee_name }} <br>
-                    {% endfor %}
-                </p>
-            </a>
-    </div>
-
-    {% endif %}
-    {% endfor %}
-    <!-- Fecha Bruno -->
-</div>
-
-
-<!-- Giovanna -->
-<div class="col">
-    {% for task in tasks.4 %}
-
-    {% if task.desired_date == dias.0 %}
-    <div class="colab-card {% if task.board_stage_name == 'Revisão' %} rev {% endif %}">
-        <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
-
-            <h1>{{ task.id }}</h1>
-            <h2>{{ task.title }}</h2>
-            <p>Prazo: <span>{{ task.desired_date | date:"d/m/y" }}</span></p>
-            <p class="blok"> {% for aloc in task.assignments %}
-                {% if aloc.is_working_on == True %}
-                <img src="{% static 'imgs/lit_on.svg' %}" alt="">
-                {% else %}
-                <img src="{% static 'imgs/lit_off.svg' %}" alt="">
                 {% endif %}
-                {{ aloc.assignee_name }} <br>
                 {% endfor %}
-            </p>
-        </a>
-    </div>
+                <!-- Fecha Bruno -->
+            </div>
 
-    {% elif task.desired_date < dias.0 %} <div class="colab-card atraso">
-        <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
 
-            <h1>{{ task.id }}</h1>
-            <h2>{{ task.title }}</h2>
-            <p>Prazo: <span>{{ task.desired_date | date:"d/m/y" }}</span></p>
+                <!-- Giovanna -->
+                <div class="col">
+                    {% for task in tasks.4 %}
 
-            <p class="blok"> {% for aloc in task.assignments %}
-                {% if aloc.is_working_on == True %}
-                <img src="{% static 'imgs/lit_on.svg' %}" alt="">
-                {% else %}
-                <img src="{% static 'imgs/lit_off.svg' %}" alt="">
+                    {% if task.desired_date == dias.0 %}
+                    <div class="colab-card {% if task.board_stage_name == 'Revisão' %} rev {% endif %}">
+                        <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
+
+                            <h1>{{ task.id }}</h1>
+                            <h2>{{ task.title }}</h2>
+                            <p>Prazo: <span>{{ task.desired_date | date:"d/m/y" }}</span></p>
+                            <p class="blok"> {% for aloc in task.assignments %}
+                                {% if aloc.is_working_on == True %}
+                                <img src="{% static 'imgs/lit_on.svg' %}" alt="">
+                                {% else %}
+                                <img src="{% static 'imgs/lit_off.svg' %}" alt="">
+                                {% endif %}
+                                {{ aloc.assignee_name }} <br>
+                                {% endfor %}
+                            </p>
+                        </a>
+                    </div>
+
+                    {% elif task.desired_date < dias.0 %} <div class="colab-card atraso">
+                        <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
+
+                            <h1>{{ task.id }}</h1>
+                            <h2>{{ task.title }}</h2>
+                            <p>Prazo: <span>{{ task.desired_date | date:"d/m/y" }}</span></p>
+
+                            <p class="blok"> {% for aloc in task.assignments %}
+                                {% if aloc.is_working_on == True %}
+                                <img src="{% static 'imgs/lit_on.svg' %}" alt="">
+                                {% else %}
+                                <img src="{% static 'imgs/lit_off.svg' %}" alt="">
+                                {% endif %}
+                                {{ aloc.assignee_name }} <br>
+                                {% endfor %}
+                            </p>
+                        </a>
+                </div>
+
                 {% endif %}
-                {{ aloc.assignee_name }} <br>
                 {% endfor %}
-            </p>
-        </a>
-</div>
-
-{% endif %}
-{% endfor %}
-<!-- Fecha Giovanna -->
-</div>
+                <!-- Fecha Giovanna -->
+                </div>
 
 
-<!-- Luca -->
-<div class="col">
-    {% for task in tasks.5 %}
+                <!-- Luca -->
+                <div class="col">
+                    {% for task in tasks.5 %}
 
-    {% if task.desired_date == dias.0 %}
-    <div class="colab-card {% if task.board_stage_name == 'Revisão' %} rev {% endif %}">
-        <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
+                    {% if task.desired_date == dias.0 %}
+                    <div class="colab-card {% if task.board_stage_name == 'Revisão' %} rev {% endif %}">
+                        <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
 
-            <h1>{{ task.id }}</h1>
-            <h2>{{ task.title }}</h2>
-            <p>Prazo: <span>{{ task.desired_date | date:"d/m/y" }}</span></p>
-            <p class="blok"> {% for aloc in task.assignments %}
-                {% if aloc.is_working_on == True %}
-                <img src="{% static 'imgs/lit_on.svg' %}" alt="">
-                {% else %}
-                <img src="{% static 'imgs/lit_off.svg' %}" alt="">
+                            <h1>{{ task.id }}</h1>
+                            <h2>{{ task.title }}</h2>
+                            <p>Prazo: <span>{{ task.desired_date | date:"d/m/y" }}</span></p>
+                            <p class="blok"> {% for aloc in task.assignments %}
+                                {% if aloc.is_working_on == True %}
+                                <img src="{% static 'imgs/lit_on.svg' %}" alt="">
+                                {% else %}
+                                <img src="{% static 'imgs/lit_off.svg' %}" alt="">
+                                {% endif %}
+                                {{ aloc.assignee_name }} <br>
+                                {% endfor %}
+                            </p>
+                        </a>
+                    </div>
+
+                    {% elif task.desired_date < dias.0 %} <div class="colab-card atraso">
+                        <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
+
+                            <h1>{{ task.id }}</h1>
+                            <h2>{{ task.title }}</h2>
+                            <p>Prazo: <span>{{ task.desired_date | date:"d/m/y" }}</span></p>
+
+                            <p class="blok"> {% for aloc in task.assignments %}
+                                {% if aloc.is_working_on == True %}
+                                <img src="{% static 'imgs/lit_on.svg' %}" alt="">
+                                {% else %}
+                                <img src="{% static 'imgs/lit_off.svg' %}" alt="">
+                                {% endif %}
+                                {{ aloc.assignee_name }} <br>
+                                {% endfor %}
+                            </p>
+                        </a>
+                </div>
+
                 {% endif %}
-                {{ aloc.assignee_name }} <br>
                 {% endfor %}
-            </p>
-        </a>
-    </div>
+                <!-- Fecha Luca -->
+                </div>
 
-    {% elif task.desired_date < dias.0 %} <div class="colab-card atraso">
-        <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
 
-            <h1>{{ task.id }}</h1>
-            <h2>{{ task.title }}</h2>
-            <p>Prazo: <span>{{ task.desired_date | date:"d/m/y" }}</span></p>
+                <!-- Luis -->
+                <div class="col">
+                    {% for task in tasks.6 %}
 
-            <p class="blok"> {% for aloc in task.assignments %}
-                {% if aloc.is_working_on == True %}
-                <img src="{% static 'imgs/lit_on.svg' %}" alt="">
-                {% else %}
-                <img src="{% static 'imgs/lit_off.svg' %}" alt="">
+                    {% if task.desired_date == dias.0 %}
+                    <div class="colab-card {% if task.board_stage_name == 'Revisão' %} rev {% endif %}">
+                        <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
+
+                            <h1>{{ task.id }}</h1>
+                            <h2>{{ task.title }}</h2>
+                            <p>Prazo: <span>{{ task.desired_date | date:"d/m/y" }}</span></p>
+                            <p class="blok"> {% for aloc in task.assignments %}
+                                {% if aloc.is_working_on == True %}
+                                <img src="{% static 'imgs/lit_on.svg' %}" alt="">
+                                {% else %}
+                                <img src="{% static 'imgs/lit_off.svg' %}" alt="">
+                                {% endif %}
+                                {{ aloc.assignee_name }} <br>
+                                {% endfor %}
+                            </p>
+                        </a>
+                    </div>
+
+                    {% elif task.desired_date < dias.0 %} <div class="colab-card atraso">
+                        <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
+
+                            <h1>{{ task.id }}</h1>
+                            <h2>{{ task.title }}</h2>
+                            <p>Prazo: <span>{{ task.desired_date | date:"d/m/y" }}</span></p>
+
+                            <p class="blok"> {% for aloc in task.assignments %}
+                                {% if aloc.is_working_on == True %}
+                                <img src="{% static 'imgs/lit_on.svg' %}" alt="">
+                                {% else %}
+                                <img src="{% static 'imgs/lit_off.svg' %}" alt="">
+                                {% endif %}
+                                {{ aloc.assignee_name }} <br>
+                                {% endfor %}
+                            </p>
+                        </a>
+                </div>
+
                 {% endif %}
-                {{ aloc.assignee_name }} <br>
                 {% endfor %}
-            </p>
-        </a>
-</div>
-
-{% endif %}
-{% endfor %}
-<!-- Fecha Luca -->
-</div>
-
-
-<!-- Luis -->
-<div class="col">
-    {% for task in tasks.6 %}
-
-    {% if task.desired_date == dias.0 %}
-    <div class="colab-card {% if task.board_stage_name == 'Revisão' %} rev {% endif %}">
-        <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
-
-            <h1>{{ task.id }}</h1>
-            <h2>{{ task.title }}</h2>
-            <p>Prazo: <span>{{ task.desired_date | date:"d/m/y" }}</span></p>
-            <p class="blok"> {% for aloc in task.assignments %}
-                {% if aloc.is_working_on == True %}
-                <img src="{% static 'imgs/lit_on.svg' %}" alt="">
-                {% else %}
-                <img src="{% static 'imgs/lit_off.svg' %}" alt="">
-                {% endif %}
-                {{ aloc.assignee_name }} <br>
-                {% endfor %}
-            </p>
-        </a>
-    </div>
-
-    {% elif task.desired_date < dias.0 %} <div class="colab-card atraso">
-        <a href="https://runrun.it/pt-BR/tasks/{{task.id}}" target="_blank">
-
-            <h1>{{ task.id }}</h1>
-            <h2>{{ task.title }}</h2>
-            <p>Prazo: <span>{{ task.desired_date | date:"d/m/y" }}</span></p>
-
-            <p class="blok"> {% for aloc in task.assignments %}
-                {% if aloc.is_working_on == True %}
-                <img src="{% static 'imgs/lit_on.svg' %}" alt="">
-                {% else %}
-                <img src="{% static 'imgs/lit_off.svg' %}" alt="">
-                {% endif %}
-                {{ aloc.assignee_name }} <br>
-                {% endfor %}
-            </p>
-        </a>
-</div>
-
-{% endif %}
-{% endfor %}
-<!-- Fecha Luis -->
-</div>
+                <!-- Fecha Luis -->
+                </div>
 
 
 

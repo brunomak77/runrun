@@ -55,7 +55,7 @@ ROOT_URLCONF = 'runrun.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['runrun/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
